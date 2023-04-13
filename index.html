@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Quiz</title>
-  </head>
-  <body>
 
-    <header>
-        <a id="highscorelink" href="highscores.html">View Highscores</a> 
-        <p id="quizTime">Time: <span id="quizRemainTime">0</span></p>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Quiz</title>
+</head>
 
-    <main>
-        <section id="titleDisplay">
-            <h1>Coding Quiz Challenge</h1>
-            <p>
-            Try to answer the following code-related question within the time limit. Keep in mind that incorrect answers will penalize your time by ten seconds!
-            </p>
-            <button id="start" onclick="startQuiz()">Start Quiz</button>
-        </section>
-        <section id=questionsDisplayBlock>
-            <h3 id="queToDisplay"></h3>
-            <ul id="optionsToDisplay"></div>
-        </section>
-        
-        <section id="scoreSection" class="hide">
-            <h1>All done!</h1>
-            <h3>You final score is : <span id="finalScore">0</span></h3>
-            Enter Initials: <input type="text" id="initial"></input>
-            <button id="submitButton">Submit</button>
-    
-        </section>
-        
-        <div>
-            <p id="correct" class="hide">Correct!</p>
-            <p id="wrong" class="hide">Wrong!</p>
+<body>
+
+  <!-- Dispplay of highscore view button and timr in header -->
+  <header>
+    <a id="highscorelink" href="highscores.html">View Highscores</a>
+    <p id="quizTime">Time: <span id="quizRemainTime">0</span></p>
+  </header>
+
+  <main>
+    <!-- section that displays introduction with start quiz button -->
+    <section id="titleDisplay">
+      <h1>Coding Quiz Challenge</h1>
+      <p>
+        Try to answer the following code-related question within the time limit. Keep in mind that incorrect answers
+        will penalize your time by ten seconds!
+      </p>
+      <button id="start" onclick="startQuiz()">Start Quiz</button>
+    </section>
+    <!-- Section that displays question and options from js -->
+    <section id=questionsDisplayBlock>
+      <h3 id="queToDisplay"></h3>
+      <ul id="optionsToDisplay">
         </div>
-    </main>
+    </section>
+    <!-- section that displays final notes after quiz -->
+    <section id="scoreSection" class="hide">
+      <h1>All done!</h1>
+      <h3>You final score is : <span id="finalScore">0</span></h3>
+      Enter Initials: <input type="text" id="initial"></input>
+      <button id="submitButton">Submit</button>
 
+    </section>
+    <!-- Section that displays if answer is correct or wrong -->
+    <div>
+      <div id="correct" class="hide">
+        <hr>
+        <h3>Correct!</h3>
+      </div>
+      <div id="wrong" class="hide">
+        <hr>
+        <h4>Wrong!</h4>
+      </div>
+    </div>
+  </main>
 
+  <script src="script.js"></script>
+</body>
 
-    
-
-    <script src="script.js"></script>
-  </body>
 </html>
